@@ -5,11 +5,12 @@ import NewsCard from '../Home/NewsCard/NewsCard';
 const Category = () => {
     const {id} = useParams();
 
-    const categoryNews = useLoaderData()
-    console.log(id)
+    const categoryNews = useLoaderData();
+
+    console.log(categoryNews)
     return (
         <div>
-            <h2>this  category has  :{categoryNews.length} news</h2>
+           {id ?  <h2>this  category has  :{categoryNews.length} news</h2> : <h2>Dragon News Home</h2> }
             {
                 categoryNews.map(news => <NewsCard
                 

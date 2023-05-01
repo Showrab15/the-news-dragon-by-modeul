@@ -12,7 +12,10 @@ const LeftNav = () => {
     useEffect(() => {
         fetch('http://localhost:5000/catagories')
             .then(res => res.json())
-            .then(data => setCatagories(data))
+            .then(data => {
+              setCatagories(data)
+              console.log(data)
+            })
             .catch(error => console.log(error))
     }, [])
 
